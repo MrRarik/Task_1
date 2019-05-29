@@ -1,0 +1,78 @@
+public class Homework {
+//1 - прописать метод main().
+    public static void main(String[] args) {
+        //2 - —оздать переменные всех пройденных типов данных и инициализировать их значени€.
+        byte byt = 90;
+        short sh = 3000;
+        int i = 12500;
+        long lon = 3350000;
+        float flot = 22.35f;
+        double doubl = -55.345;
+        char ch = 65;
+        boolean bool = true;
+        System.out.println("byte: " + byt);
+        System.out.println("short: " +sh);
+        System.out.println("int: " +i);
+        System.out.println("long: " +lon);
+        System.out.println("float: " +flot);
+        System.out.println("double: " +doubl);
+        System.out.println("char: " +ch);
+
+        int a = 10,
+                b = 5,
+                c = 40,
+                d = 4;
+        int g = sum(a, b, c, d);
+        System.out.println("–езультат уравнени€: " + g);
+
+        comparison(13);
+         number(9);
+         string("ƒруг");
+         years(1904);
+
+    }
+    //3 - Ќаписать метод вычисл€ющий выражение a * (b + (c / d)) и возвращающий результат,
+    //где a, b, c, d Ц входные параметры этого метода.
+    public static int sum(int a, int b, int c, int d) {
+        int g;
+        return g = a * (b + (c / d));
+    }
+    //4 - Ќаписать метод, принимающий на вход два числа и провер€ющий,
+    // что их сумма лежит в пределах от 10 до 20 (включительно), если да Ц вернуть true, в противном случае Ц false.
+    public static boolean comparison(int n) {
+        if (n >=10 && n<=20) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //5 - Ќаписать метод, которому в качестве параметра передаетс€ целое число, метод
+    // должен напечатать в консоль, положительное ли число передали или отрицательное.
+    // «амечание: ноль считаем положительным числом.
+    //6 - Ќаписать метод, которому в качестве параметра передаетс€ целое число.
+    // ћетод должен вернуть true, если число отрицательное.
+    public static boolean number(int m) {
+        if (m>=0) {
+            System.out.println(m + " :ѕоложительное");
+            return false;
+        } else {
+            System.out.println(m + " :ќтрицательное");
+            return true;
+        }
+    }
+    //7 - Ќаписать метод, которому в качестве параметра передаетс€ строка, обозначающа€ им€.
+    // ћетод должен вывести в консоль сообщение Ђѕривет, указанное_им€!ї.
+    public static void string(String name) {
+        System.out.println("ѕривет " + name + "!");
+    }
+    //8 - *Ќаписать метод, который определ€ет, €вл€етс€ ли год високосным, и выводит сообщение в консоль.
+    //  аждый 4-й год €вл€етс€ високосным, кроме каждого 100-го, при этом каждый 400-й Ц високосный.
+    public static void years(int r) {
+        if (r % 4 == 0 && r % 100 != 0 || r % 4 == 0 && r % 400 == 0){
+            System.out.println("√од высокосный");
+        } else {
+            System.out.println("√од не высокосный ");
+        }
+    }
+
+}
